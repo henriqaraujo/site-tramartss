@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir dist
           cp index.html dist/
-          cp -r css js fonts img dist/
+          cp -r css js fonts public dist/
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0

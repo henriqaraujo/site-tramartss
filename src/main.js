@@ -121,7 +121,7 @@ const weave3d = (() => {
   if (!canvas || !host) return null;
   let renderer;
   try {
-    renderer = new WebGLRenderer({ canvas, antialias: true, powerPreference: "high-performance" });
+    renderer = new WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
   } catch (e) { return null; }
   const BG = new Color("#e8ede6");
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
@@ -132,7 +132,6 @@ const weave3d = (() => {
   renderer.shadowMap.type = PCFSoftShadowMap;
 
   const scene = new Scene();
-  scene.background = BG;
   const camera = new PerspectiveCamera(32, 1, 0.1, 80);
   scene.add(new HemisphereLight("#ffffff", "#b9c7bb", 1.35));
   const key = new DirectionalLight("#fff4e2", 2.6);
@@ -418,7 +417,29 @@ function run() {
       scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: true }
     });
   });
-  $$(".mat li, .kit__text > *").forEach((el) => {
+  /* materiais: a foto acompanha o item que está no centro da tela */
+  (() => {
+    const items = $$("#matList li"), fig = $("#matImg");
+    if (!items.length) return;
+    const num = $("#matNum"), name = $("#matName");
+    let cur = 0;
+    fig.classList.add("s0");
+    const show = (i) => {
+      if (i === cur) return;
+      cur = i;
+      items.forEach((li, k) => li.classList.toggle("is-on", k === i));
+      fig.dataset.s = i;
+      [0, 1, 2, 3].forEach((k) => fig.classList.toggle("s" + k, k <= i));
+      num.textContent = "0" + (i + 1);
+      name.textContent = $("h3", items[i]).textContent;
+    };
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => { if (e.isIntersecting) show(items.indexOf(e.target)); });
+    }, { rootMargin: isDesktop() ? "-42% 0px -42% 0px" : "-52% 0px -34% 0px" });
+    items.forEach((li) => io.observe(li));
+    items.forEach((li, i) => li.addEventListener("click", () => show(i)));
+  })();
+  $$(".kit__text > *").forEach((el) => {
     gsap.from(el, {
       opacity: 0, y: 34, duration: 1, ease: "power3.out",
       scrollTrigger: { trigger: el, start: "top 90%", once: true }

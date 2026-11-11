@@ -9,20 +9,22 @@
 <meta property="og:title" content="TRAMÁRTSS | Móveis artesanais para área externa">
 <meta property="og:description" content="Alumínio e tricô náutico, direto de fábrica e personalizados. Entrega em SP, MG, RJ, GO e DF.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/capa.jpg">
+<meta property="og:image" content="public/img/capa.jpg">
+<link rel="icon" type="image/png" href="public/logo-icon.png">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preload" href="img/capa.jpg" as="image">
+<link rel="preload" href="public/img/capa.jpg" as="image">
 <link rel="preload" href="fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="loader" id="loader" aria-hidden="true"><span class="loader__name" id="loaderName">TRAMÁRTSS</span></div>
+<div class="loader" id="loader" aria-hidden="true"><img class="loader__logo" src="public/logo-icon.png" alt="" width="117" height="50"><span class="loader__name" id="loaderName">TRAMÁRTSS</span></div>
 
 <header class="nav" id="nav">
   <a class="nav__brand" href="#topo" aria-label="TRAMÁRTSS, início">
-    <span class="nav__name">TRAMÁRTSS</span>
-    <span class="nav__sub">Móveis artesanais</span>
+    <img class="nav__logo" src="public/logo-icon.png" alt="" width="117" height="50">
+    <span class="nav__txt"><span class="nav__name">TRAMÁRTSS</span>
+    <span class="nav__sub">Móveis artesanais</span></span>
   </a>
   <nav class="nav__links" id="menu" aria-label="Principal">
     <a href="#pecas">Peças</a>
@@ -41,7 +43,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero__media" id="heroMedia">
-      <img src="img/capa.jpg" alt="Poltronas e sofá redondo em tricô náutico em um deck de madeira com vista para o campo" fetchpriority="high" width="1200" height="900">
+      <img src="public/img/capa.jpg" alt="Poltronas e sofá redondo em tricô náutico em um deck de madeira com vista para o campo" fetchpriority="high" width="3200" height="2400">
     </div>
     <div class="hero__content">
       <h1 class="hero__title" id="heroTitle">
@@ -60,7 +62,7 @@
 
   <!-- MANIFESTO com fotos dentro da frase -->
   <section class="intro">
-    <p class="intro__text" id="intro">Cada peça nasce na nossa fábrica <span class="inl" style="background-image:url(img/2.jpg)"></span> com estrutura de alumínio, tricô náutico <span class="inl" style="background-image:url(img/13.jpg)"></span> trançado à mão e as medidas exatas <span class="inl" style="background-image:url(img/sofa.jpg)"></span> do seu espaço.</p>
+    <p class="intro__text" id="intro">Cada peça nasce na nossa fábrica <span class="inl" style="background-image:url(public/img/2.jpg)"></span> com estrutura de alumínio, tricô náutico <span class="inl" style="background-image:url(public/img/13.jpg)"></span> trançado à mão e as medidas exatas <span class="inl" style="background-image:url(public/img/sofa.jpg)"></span> do seu espaço.</p>
   </section>
 
   <!-- FATOS -->
@@ -84,30 +86,98 @@
       </div>
     </div>
   </section>
-  <section class="materials">
-    <figure class="materials__img reveal-img"><img src="img/chaise.jpg" alt="Detalhe do tricô náutico preto em chaise redonda" loading="lazy" width="844" height="1262"></figure>
+  <section class="materials" id="materiais">
+    <figure class="materials__img" id="matImg" data-s="0" aria-label="Ilustração técnica das camadas de uma poltrona TRAMÁRTSS">
+      <svg class="mart" viewBox="0 0 400 500" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <pattern id="ropeP" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="10" height="10" fill="#27332e"/>
+            <path d="M0 2.5h10M0 7.5h10" stroke="#5a6d63" stroke-width="2.6"/>
+            <path d="M2.5 0v10M7.5 0v10" stroke="#161e1a" stroke-width="2.2"/>
+          </pattern>
+          <linearGradient id="cushG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3eedf"/><stop offset="1" stop-color="#ddd4bb"/></linearGradient>
+          <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+          <clipPath id="backIn"><path d="M120 304 V180 Q120 148 154 148 H246 Q280 148 280 180 V304 Z"/></clipPath>
+          <clipPath id="lupa"><circle r="40"/></clipPath>
+        </defs>
+        <ellipse cx="200" cy="228" rx="160" ry="160" fill="url(#halo)"/>
+        <!-- poltrona -->
+        <g transform="translate(48 15) scale(.76)">
+          <ellipse class="floor" cx="200" cy="428" rx="132" ry="9"/>
+          <g class="frame raw" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="t" d="M104 302 V176 Q104 130 152 130 H248 Q296 130 296 176 V302" pathLength="1" stroke-width="11" style="--d:0.00s"/><path class="t" d="M104 244 H68 Q62 244 62 250 V304 H104" pathLength="1" stroke-width="9" style="--d:0.16s"/><path class="t" d="M296 244 H332 Q338 244 338 250 V304 H296" pathLength="1" stroke-width="9" style="--d:0.32s"/><path class="t" d="M98 302 H302 Q306 302 306 306 V332 Q306 336 302 336 H98 Q94 336 94 332 V306 Q94 302 98 302 Z" pathLength="1" stroke-width="9" style="--d:0.48s"/><path class="t" d="M110 336 L96 420" pathLength="1" stroke-width="10" style="--d:0.64s"/><path class="t" d="M290 336 L304 420" pathLength="1" stroke-width="10" style="--d:0.80s"/><path class="t" d="M104 376 H296" pathLength="1" stroke-width="6" style="--d:0.96s"/><path class="hl" d="M104 302 V176 Q104 130 152 130 H248 Q296 130 296 176 V302" pathLength="1" stroke-width="3.1" transform="translate(-1.6 -1.6)" style="--d:0.10s"/><path class="hl" d="M104 244 H68 Q62 244 62 250 V304 H104" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.26s"/><path class="hl" d="M296 244 H332 Q338 244 338 250 V304 H296" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.42s"/><path class="hl" d="M98 302 H302 Q306 302 306 306 V332 Q306 336 302 336 H98 Q94 336 94 332 V306 Q94 302 98 302 Z" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.58s"/><path class="hl" d="M110 336 L96 420" pathLength="1" stroke-width="2.8" transform="translate(-1.6 -1.6)" style="--d:0.74s"/><path class="hl" d="M290 336 L304 420" pathLength="1" stroke-width="2.8" transform="translate(-1.6 -1.6)" style="--d:0.90s"/><path class="hl" d="M104 376 H296" pathLength="1" stroke-width="2.0" transform="translate(-1.6 -1.6)" style="--d:1.06s"/></g>
+          <g class="frame paint" fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="t" d="M104 302 V176 Q104 130 152 130 H248 Q296 130 296 176 V302" pathLength="1" stroke-width="11" style="--d:0.00s"/><path class="t" d="M104 244 H68 Q62 244 62 250 V304 H104" pathLength="1" stroke-width="9" style="--d:0.16s"/><path class="t" d="M296 244 H332 Q338 244 338 250 V304 H296" pathLength="1" stroke-width="9" style="--d:0.32s"/><path class="t" d="M98 302 H302 Q306 302 306 306 V332 Q306 336 302 336 H98 Q94 336 94 332 V306 Q94 302 98 302 Z" pathLength="1" stroke-width="9" style="--d:0.48s"/><path class="t" d="M110 336 L96 420" pathLength="1" stroke-width="10" style="--d:0.64s"/><path class="t" d="M290 336 L304 420" pathLength="1" stroke-width="10" style="--d:0.80s"/><path class="t" d="M104 376 H296" pathLength="1" stroke-width="6" style="--d:0.96s"/><path class="hl" d="M104 302 V176 Q104 130 152 130 H248 Q296 130 296 176 V302" pathLength="1" stroke-width="3.1" transform="translate(-1.6 -1.6)" style="--d:0.10s"/><path class="hl" d="M104 244 H68 Q62 244 62 250 V304 H104" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.26s"/><path class="hl" d="M296 244 H332 Q338 244 338 250 V304 H296" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.42s"/><path class="hl" d="M98 302 H302 Q306 302 306 306 V332 Q306 336 302 336 H98 Q94 336 94 332 V306 Q94 302 98 302 Z" pathLength="1" stroke-width="2.5" transform="translate(-1.6 -1.6)" style="--d:0.58s"/><path class="hl" d="M110 336 L96 420" pathLength="1" stroke-width="2.8" transform="translate(-1.6 -1.6)" style="--d:0.74s"/><path class="hl" d="M290 336 L304 420" pathLength="1" stroke-width="2.8" transform="translate(-1.6 -1.6)" style="--d:0.90s"/><path class="hl" d="M104 376 H296" pathLength="1" stroke-width="2.0" transform="translate(-1.6 -1.6)" style="--d:1.06s"/></g>
+          <g class="joints"><circle cx="104" cy="302" r="5.4"/><circle cx="296" cy="302" r="5.4"/><circle cx="104" cy="244" r="5.4"/><circle cx="296" cy="244" r="5.4"/><circle cx="104" cy="304" r="5.4"/><circle cx="296" cy="304" r="5.4"/><circle cx="110" cy="336" r="5.4"/><circle cx="290" cy="336" r="5.4"/><circle cx="104" cy="376" r="5.4"/><circle cx="296" cy="376" r="5.4"/></g>
+          <g class="feet"><rect x="88" y="418" width="16" height="7" rx="3.5" transform="rotate(8 96 420)"/><rect x="296" y="418" width="16" height="7" rx="3.5" transform="rotate(-8 304 420)"/></g>
+          <g class="weave">
+            <rect x="106" y="130" width="188" height="176" fill="url(#ropeP)" clip-path="url(#backIn)"/>
+            <path class="wrap" d="M120 300 V180 Q120 148 154 148 H246 Q280 148 280 180 V300" fill="none"/>
+            <rect x="66" y="250" width="34" height="50" rx="3" fill="url(#ropeP)"/>
+            <rect x="300" y="250" width="34" height="50" rx="3" fill="url(#ropeP)"/>
+            <rect x="100" y="306" width="200" height="26" rx="2" fill="url(#ropeP)"/>
+          </g>
+          <g class="cush">
+            <rect x="130" y="156" width="140" height="106" rx="24" class="cb"/>
+            <rect x="114" y="264" width="172" height="40" rx="15" class="cs"/>
+            <path d="M138 288 H262" class="st"/>
+            <g class="tuft"><circle cx="160" cy="182" r="2.4"/><circle cx="200" cy="182" r="2.4"/><circle cx="240" cy="182" r="2.4"/><circle cx="160" cy="214" r="2.4"/><circle cx="200" cy="214" r="2.4"/><circle cx="240" cy="214" r="2.4"/></g>
+          </g>
+        </g>
+        <!-- cota -->
+        <g class="dim"><path d="M95 352 H152 M248 352 H305 M95 346 V358 M305 346 V358" fill="none"/><text x="200" y="355.5" text-anchor="middle">À SUA MEDIDA</text></g>
+        <!-- pistola -->
+        <g class="gun" transform="translate(12 0)"><rect x="8" y="188" width="30" height="15" rx="5"/><rect x="36" y="192" width="12" height="7" rx="2"/><rect x="15" y="201" width="9" height="22" rx="3"/><path d="M8 195 H0" stroke="#6c7d74" stroke-width="3" fill="none"/><path class="cone" d="M47 197 L86 176 V240 Z"/><g><circle class="spray" cx="46" cy="196" r="1.3" style="--k:0.00s"/><circle class="spray" cx="49" cy="196" r="1.75" style="--k:0.11s"/><circle class="spray" cx="52" cy="196" r="2.2" style="--k:0.22s"/><circle class="spray" cx="55" cy="196" r="1.3" style="--k:0.33s"/><circle class="spray" cx="58" cy="196" r="1.75" style="--k:0.44s"/><circle class="spray" cx="46" cy="201" r="2.2" style="--k:0.55s"/><circle class="spray" cx="49" cy="201" r="1.3" style="--k:0.66s"/><circle class="spray" cx="52" cy="201" r="1.75" style="--k:0.77s"/><circle class="spray" cx="55" cy="201" r="2.2" style="--k:0.88s"/><circle class="spray" cx="58" cy="201" r="1.3" style="--k:0.99s"/><circle class="spray" cx="46" cy="206" r="1.75" style="--k:1.10s"/><circle class="spray" cx="49" cy="206" r="2.2" style="--k:1.21s"/><circle class="spray" cx="52" cy="206" r="1.3" style="--k:1.32s"/><circle class="spray" cx="55" cy="206" r="1.75" style="--k:1.43s"/><circle class="spray" cx="58" cy="206" r="2.2" style="--k:1.54s"/><circle class="spray" cx="46" cy="211" r="1.3" style="--k:1.65s"/><circle class="spray" cx="49" cy="211" r="1.75" style="--k:1.76s"/><circle class="spray" cx="52" cy="211" r="2.2" style="--k:1.87s"/><circle class="spray" cx="55" cy="211" r="1.3" style="--k:1.98s"/><circle class="spray" cx="58" cy="211" r="1.75" style="--k:2.09s"/></g><g class="field"><text x="60" y="166">+</text><text x="74" y="160">+</text><text x="92" y="262">−</text><text x="80" y="276">−</text></g></g>
+        <!-- sol UV -->
+        <g class="sun" transform="translate(330 150)"><circle r="10"/><g class="rays"><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(0)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(30)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(60)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(90)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(120)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(150)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(180)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(210)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(240)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(270)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(300)"/><line x1="0" y1="-19" x2="0" y2="-26" transform="rotate(330)"/></g><text y="46" text-anchor="middle">UV</text></g>
+        <!-- água -->
+        <g class="water" transform="translate(48 15) scale(.76)"><path class="fall" d="M160 118 q-4.5 8 0 12.5 q4.5 -4.5 0 -12.5z" style="--k:0.00s"/><path class="fall" d="M204 118 q-4.5 8 0 12.5 q4.5 -4.5 0 -12.5z" style="--k:0.55s"/><path class="fall" d="M250 118 q-4.5 8 0 12.5 q4.5 -4.5 0 -12.5z" style="--k:1.10s"/><ellipse cx="145" cy="170" rx="4.2" ry="5" style="--k:0.00s"/><ellipse cx="177" cy="160" rx="4.2" ry="5" style="--k:0.17s"/><ellipse cx="213" cy="172" rx="4.2" ry="5" style="--k:0.34s"/><ellipse cx="245" cy="162" rx="4.2" ry="5" style="--k:0.51s"/><ellipse cx="167" cy="200" rx="4.2" ry="5" style="--k:0.68s"/><ellipse cx="231" cy="206" rx="4.2" ry="5" style="--k:0.85s"/><ellipse cx="201" cy="190" rx="4.2" ry="5" style="--k:1.02s"/></g>
+        <!-- amostras de cor -->
+        <g class="swatch"><circle cx="156" cy="96" r="6.5" fill="#e7e0cd"/><circle cx="178" cy="96" r="6.5" fill="#3c4743"/><circle cx="200" cy="96" r="6.5" fill="#8aa394"/><circle cx="222" cy="96" r="6.5" fill="#c07a56"/><circle cx="244" cy="96" r="6.5" fill="#44566b"/></g>
+        <!-- lupa: corte do material -->
+        <g class="lupa" transform="translate(200 405) scale(.78)">
+          <circle r="46" class="lr"/><circle r="42.5" class="lr2"/>
+          <g clip-path="url(#lupa)">
+            <rect x="-42" y="-42" width="84" height="84" class="lbg"/>
+            <g class="l0"><circle r="24" fill="#aebbb5" stroke="#7d8d86" stroke-width="1.5"/><circle r="15.5" fill="#f1f5f3" stroke="#7d8d86" stroke-width="1.2"/><path d="M-19 -12 A22 22 0 0 1 4 -22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".8"/></g>
+            <g class="l1"><circle r="27" fill="#26332d"/><circle r="24" fill="#aebbb5"/><circle r="15.5" fill="#f1f5f3" stroke="#7d8d86" stroke-width="1.2"/><g class="plus"><text x="-34" y="-26">+</text><text x="28" y="-26">+</text><text x="-34" y="36">+</text><text x="28" y="36">+</text></g></g>
+            <g class="l2"><circle cx="0" cy="-10" r="14" fill="#27332e" stroke="#5a6d63" stroke-width="1.6"/><circle cx="-12" cy="10" r="14" fill="#27332e" stroke="#5a6d63" stroke-width="1.6"/><circle cx="12" cy="10" r="14" fill="#27332e" stroke="#5a6d63" stroke-width="1.6"/><path d="M-8 -14 q8 -6 14 2 M-20 6 q4 -8 12 -4 M6 6 q8 -6 14 0" fill="none" stroke="#7d9186" stroke-width="1.4" stroke-linecap="round"/></g>
+            <g class="l3"><rect x="-42" y="-8" width="84" height="12" fill="#e7e0cd"/><rect x="-42" y="4" width="84" height="3" fill="#7fb0c4"/><rect x="-42" y="7" width="84" height="40" fill="#efe8d4"/><g fill="#d9cfb2"><circle cx="-26" cy="18" r="2.2"/><circle cx="-8" cy="28" r="2.6"/><circle cx="10" cy="16" r="2"/><circle cx="28" cy="30" r="2.4"/><circle cx="-16" cy="38" r="2"/><circle cx="18" cy="40" r="2.2"/></g><ellipse cx="-14" cy="-13" rx="5" ry="5.5" fill="rgba(120,170,190,.6)" stroke="#fff"/><ellipse cx="14" cy="-12" rx="4" ry="4.6" fill="rgba(120,170,190,.6)" stroke="#fff"/></g>
+          </g>
+          <text class="ll l0t" y="62">TUBO OCO E LEVE</text><text class="ll l1t" y="62">CAMADA DE PÓ CURADO</text><text class="ll l2t" y="62">FIOS TRANÇADOS</text><text class="ll l3t" y="62">TECIDO · BARREIRA · ESPUMA</text>
+        </g>
+        <!-- legendas -->
+        <g class="cap c0"><text x="200" y="52">Estrutura de alumínio</text><text x="200" y="72" class="sub">leve, firme e sem ferrugem</text></g>
+        <g class="cap c1"><text x="200" y="52">Pintura eletrostática</text><text x="200" y="72" class="sub">pó com carga elétrica, camada uniforme</text></g>
+        <g class="cap c2"><text x="200" y="52">Tricô náutico com UV</text><text x="200" y="72" class="sub">corda trançada à mão, feita para o sol</text></g>
+        <g class="cap c3"><text x="200" y="52">Acquablok e couro náutico</text><text x="200" y="72" class="sub">a água escorre, a cor fica</text></g>
+      </svg>
+      <figcaption class="materials__cap"><b id="matNum">01</b><span> / 04</span><em id="matName">Estrutura de alumínio</em></figcaption>
+    </figure>
     <div class="materials__text">
+      <p class="eyebrow"><b>01</b> Materiais</p>
       <h2 class="sec-title materials__title">Feito com <em>o que dura</em></h2>
-      <ol class="mat">
-        <li><span>01</span><h3>Estrutura de alumínio</h3><p>Leve para mover de lugar, firme no uso e sem ferrugem com chuva ou maresia.</p></li>
-        <li><span>02</span><h3>Pintura eletrostática</h3><p>Acabamento uniforme e resistente aplicado sobre toda a estrutura.</p></li>
-        <li><span>03</span><h3>Acabamento em tricô náutico com UV</h3><p>Corda náutica trançada à mão na fábrica, própria para ficar ao sol.</p></li>
-        <li><span>04</span><h3>Estofados em Acquablok e couro náutico</h3><p>Materiais pensados para área externa, com cores escolhidas junto com você.</p></li>
+      <ol class="mat" id="matList">
+        <li class="is-on" data-i="0"><span>01</span><h3>Estrutura de alumínio</h3><p>Leve para mover de lugar, firme no uso e sem ferrugem com chuva ou maresia.</p></li>
+        <li data-i="1"><span>02</span><h3>Pintura eletrostática</h3><p>Acabamento uniforme e resistente aplicado sobre toda a estrutura.</p></li>
+        <li data-i="2"><span>03</span><h3>Acabamento em tricô náutico com UV</h3><p>Corda náutica trançada à mão na fábrica, própria para ficar ao sol.</p></li>
+        <li data-i="3"><span>04</span><h3>Estofados em Acquablok e couro náutico</h3><p>Materiais pensados para área externa, com cores escolhidas junto com você.</p></li>
       </ol>
     </div>
   </section>
 
+  <div class="rope" aria-hidden="true"></div>
+
   <!-- PEÇAS: lista grande, a foto aparece e segue o cursor -->
   <section class="pieces" id="pecas">
-    <h2 class="sec-title">As <em>peças</em></h2>
+    <p class="eyebrow"><b>02</b> Coleção</p>
+      <h2 class="sec-title">As <em>peças</em></h2>
     <ul class="plist" id="plist">
-      <li class="prow" data-img="img/sofa.jpg"><img class="prow__thumb" src="img/sofa.jpg" alt="Sofá em tricô náutico com mesa de centro de madeira" loading="lazy"><h3 class="prow__name">Sofás</h3><p class="prow__desc">De dois e três lugares, com almofadas.</p></li>
-      <li class="prow" data-img="img/poltronas.jpg"><img class="prow__thumb" src="img/poltronas.jpg" alt="Duas poltronas e mesa de centro no jardim" loading="lazy"><h3 class="prow__name">Poltronas</h3><p class="prow__desc">Para compor com o sofá.</p></li>
-      <li class="prow" data-img="img/24.jpg"><img class="prow__thumb" src="img/24.jpg" alt="Mesa de jantar retangular com tampo de madeira" loading="lazy"><h3 class="prow__name">Mesas de jantar</h3><p class="prow__desc">Redondas e retangulares, até dez lugares.</p></li>
-      <li class="prow" data-img="img/2.jpg"><img class="prow__thumb" src="img/2.jpg" alt="Mesa redonda com tampo giratório embutido" loading="lazy"><h3 class="prow__name">Tampo giratório</h3><p class="prow__desc">Mesa com centro giratório embutido.</p></li>
-      <li class="prow" data-img="img/cadeiras.jpg"><img class="prow__thumb" src="img/cadeiras.jpg" alt="Cadeiras em corda laranja ao redor de mesa redonda" loading="lazy"><h3 class="prow__name">Cadeiras</h3><p class="prow__desc">Para jantar e bistrô.</p></li>
-      <li class="prow" data-img="img/19.jpg"><img class="prow__thumb" src="img/19.jpg" alt="Balanço suspenso em área de estar" loading="lazy"><h3 class="prow__name">Balanços</h3><p class="prow__desc">Suspensos, com suporte próprio.</p></li>
-      <li class="prow" data-img="img/chaise.jpg"><img class="prow__thumb" src="img/chaise.jpg" alt="Chaise redonda com almofadas" loading="lazy"><h3 class="prow__name">Chaises</h3><p class="prow__desc">Para o descanso ao lado da piscina.</p></li>
+      <li class="prow" data-img="public/img/sofa.jpg"><img class="prow__thumb" src="public/img/sofa.jpg" alt="Sofá em tricô náutico com mesa de centro de madeira" loading="lazy"><h3 class="prow__name">Sofás</h3><p class="prow__desc">De dois e três lugares, com almofadas.</p></li>
+      <li class="prow" data-img="public/img/poltronas.jpg"><img class="prow__thumb" src="public/img/poltronas.jpg" alt="Duas poltronas e mesa de centro no jardim" loading="lazy"><h3 class="prow__name">Poltronas</h3><p class="prow__desc">Para compor com o sofá.</p></li>
+      <li class="prow" data-img="public/img/24.jpg"><img class="prow__thumb" src="public/img/24.jpg" alt="Mesa de jantar retangular com tampo de madeira" loading="lazy"><h3 class="prow__name">Mesas de jantar</h3><p class="prow__desc">Redondas e retangulares, até dez lugares.</p></li>
+      <li class="prow" data-img="public/img/2.jpg"><img class="prow__thumb" src="public/img/2.jpg" alt="Mesa redonda com tampo giratório embutido" loading="lazy"><h3 class="prow__name">Tampo giratório</h3><p class="prow__desc">Mesa com centro giratório embutido.</p></li>
+      <li class="prow" data-img="public/img/cadeiras.jpg"><img class="prow__thumb" src="public/img/cadeiras.jpg" alt="Cadeiras em corda laranja ao redor de mesa redonda" loading="lazy"><h3 class="prow__name">Cadeiras</h3><p class="prow__desc">Para jantar e bistrô.</p></li>
+      <li class="prow" data-img="public/img/19.jpg"><img class="prow__thumb" src="public/img/19.jpg" alt="Balanço suspenso em área de estar" loading="lazy"><h3 class="prow__name">Balanços</h3><p class="prow__desc">Suspensos, com suporte próprio.</p></li>
+      <li class="prow" data-img="public/img/chaise.jpg"><img class="prow__thumb" src="public/img/chaise.jpg" alt="Chaise redonda com almofadas" loading="lazy"><h3 class="prow__name">Chaises</h3><p class="prow__desc">Para o descanso ao lado da piscina.</p></li>
     </ul>
   </section>
 
@@ -121,7 +191,11 @@
 
   <!-- KIT -->
   <section class="kit">
-    <figure class="kit__img reveal-img"><img src="img/kit.jpg" alt="Kit completo com sofá, poltronas, mesa com cadeiras e balanço" loading="lazy" width="736" height="589"></figure>
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><path id="bc" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#bc" startOffset="0" textLength="486" lengthAdjust="spacing">Feito à mão • Sob medida • Direto de fábrica • </textPath></text></svg>
+      <b>10<small>itens</small></b>
+    </div>
+    <figure class="kit__img reveal-img"><img src="public/img/kit.jpg" alt="Kit completo com sofá, poltronas, mesa com cadeiras e balanço" loading="lazy" width="736" height="589"></figure>
     <div class="kit__text">
       <h2>O ambiente inteiro em um kit de <em>10 itens.</em></h2>
       <p>Para quem quer resolver a área externa de uma vez, com todas as peças na mesma trama e nas mesmas cores.</p>
@@ -139,13 +213,13 @@
   <!-- AMBIENTES: zoom parallax, a foto central cresce até a tela cheia -->
   <section class="zoom" id="ambientes">
     <div class="zoom__sticky">
-      <div class="zoom__el"><div class="zoom__box"><img src="img/18.jpg" alt="Área gourmet com deck, sofás em corda clara e balanço" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/4.jpg" alt="Mesa de jantar de madeira ao lado da piscina" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/10.jpg" alt="Área de estar iluminada com parede terracota" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/16.jpg" alt="Varanda com grama, sofás e poltronas em corda clara" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/22.jpg" alt="Sala externa com sofá curvo e poltronas verdes" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/8.jpg" alt="Sofás e mesa de centro sobre piso de pedra com jardim" loading="lazy"></div></div>
-      <div class="zoom__el"><div class="zoom__box"><img src="img/14.jpg" alt="Deck de madeira com poltronas e chaise" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/18.jpg" alt="Área gourmet com deck, sofás em corda clara e balanço" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/4.jpg" alt="Mesa de jantar de madeira ao lado da piscina" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/10.jpg" alt="Área de estar iluminada com parede terracota" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/16.jpg" alt="Varanda com grama, sofás e poltronas em corda clara" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/22.jpg" alt="Sala externa com sofá curvo e poltronas verdes" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/8.jpg" alt="Sofás e mesa de centro sobre piso de pedra com jardim" loading="lazy"></div></div>
+      <div class="zoom__el"><div class="zoom__box"><img src="public/img/14.jpg" alt="Deck de madeira com poltronas e chaise" loading="lazy"></div></div>
       <div class="zoom__cap" id="zoomCap"><h2>Ambientes <em>entregues</em></h2><p>Piscinas, varandas, decks e áreas gourmet de clientes.</p></div>
     </div>
   </section>
@@ -155,28 +229,29 @@
     <div class="gallery__sticky" aria-hidden="true"><span>Galeria</span></div>
     <h2 class="sr-only">Galeria de fotos</h2>
     <div class="gallery__grid" id="gallery">
-      <button class="g"><img src="img/1.jpg" alt="Deck com sofás, poltronas e balanço de frente para a mata" loading="lazy"></button>
-      <button class="g"><img src="img/3.jpg" alt="Sofá e poltronas ao lado da piscina" loading="lazy"></button>
-      <button class="g"><img src="img/5.jpg" alt="Sofá, poltronas e mesa sobre deck de madeira" loading="lazy"></button>
-      <button class="g"><img src="img/6.jpg" alt="Varanda com sofá cinza, balanço e mesa de centro" loading="lazy"></button>
-      <button class="g"><img src="img/7.jpg" alt="Varanda coberta com sofá, poltronas e balanço" loading="lazy"></button>
-      <button class="g"><img src="img/9.jpg" alt="Pátio com poltronas, espreguiçadeiras e balanço" loading="lazy"></button>
-      <button class="g"><img src="img/11.jpg" alt="Deck laranja com sofá e balanço" loading="lazy"></button>
-      <button class="g"><img src="img/13.jpg" alt="Mesa redonda de madeira com cadeiras pretas" loading="lazy"></button>
-      <button class="g"><img src="img/15.jpg" alt="Cadeiras laranja ao redor da piscina" loading="lazy"></button>
-      <button class="g"><img src="img/17.jpg" alt="Sofás e mesas de centro em piso de pedra" loading="lazy"></button>
-      <button class="g"><img src="img/20.jpg" alt="Terraço com chaises, sofás e poltronas claras" loading="lazy"></button>
-      <button class="g"><img src="img/21.jpg" alt="Área gourmet iluminada com mesa redonda" loading="lazy"></button>
-      <button class="g"><img src="img/23.jpg" alt="Mesa de jantar longa com cadeiras pretas" loading="lazy"></button>
-      <button class="g"><img src="img/conjunto.jpg" alt="Sofá, poltronas e mesa de centro em varanda" loading="lazy"></button>
-      <button class="g"><img src="img/19.jpg" alt="Balanço suspenso, sofás e mesa de centro" loading="lazy"></button>
-      <button class="g"><img src="img/2.jpg" alt="Mesa redonda com centro giratório e cadeiras claras" loading="lazy"></button>
+      <button class="g"><img src="public/img/1.jpg" alt="Deck com sofás, poltronas e balanço de frente para a mata" loading="lazy"></button>
+      <button class="g"><img src="public/img/3.jpg" alt="Sofá e poltronas ao lado da piscina" loading="lazy"></button>
+      <button class="g"><img src="public/img/5.jpg" alt="Sofá, poltronas e mesa sobre deck de madeira" loading="lazy"></button>
+      <button class="g"><img src="public/img/6.jpg" alt="Varanda com sofá cinza, balanço e mesa de centro" loading="lazy"></button>
+      <button class="g"><img src="public/img/7.jpg" alt="Varanda coberta com sofá, poltronas e balanço" loading="lazy"></button>
+      <button class="g"><img src="public/img/9.jpg" alt="Pátio com poltronas, espreguiçadeiras e balanço" loading="lazy"></button>
+      <button class="g"><img src="public/img/11.jpg" alt="Deck laranja com sofá e balanço" loading="lazy"></button>
+      <button class="g"><img src="public/img/13.jpg" alt="Mesa redonda de madeira com cadeiras pretas" loading="lazy"></button>
+      <button class="g"><img src="public/img/15.jpg" alt="Cadeiras laranja ao redor da piscina" loading="lazy"></button>
+      <button class="g"><img src="public/img/17.jpg" alt="Sofás e mesas de centro em piso de pedra" loading="lazy"></button>
+      <button class="g"><img src="public/img/20.jpg" alt="Terraço com chaises, sofás e poltronas claras" loading="lazy"></button>
+      <button class="g"><img src="public/img/21.jpg" alt="Área gourmet iluminada com mesa redonda" loading="lazy"></button>
+      <button class="g"><img src="public/img/23.jpg" alt="Mesa de jantar longa com cadeiras pretas" loading="lazy"></button>
+      <button class="g"><img src="public/img/conjunto.jpg" alt="Sofá, poltronas e mesa de centro em varanda" loading="lazy"></button>
+      <button class="g"><img src="public/img/19.jpg" alt="Balanço suspenso, sofás e mesa de centro" loading="lazy"></button>
+      <button class="g"><img src="public/img/2.jpg" alt="Mesa redonda com centro giratório e cadeiras claras" loading="lazy"></button>
     </div>
   </section>
 
   <!-- PROCESSO -->
   <section class="process" id="sob-medida">
-    <h2 class="sec-title">Do pedido <em>à entrega</em></h2>
+    <p class="eyebrow"><b>03</b> Sob medida</p>
+      <h2 class="sec-title">Do pedido <em>à entrega</em></h2>
     <ol class="steps">
       <li class="step"><span class="step__n">01</span><h3>Conversa</h3><p>Você conta como é o espaço e o que imagina para ele. Fotos e medidas ajudam bastante.</p></li>
       <li class="step"><span class="step__n">02</span><h3>Proposta</h3><p>Definimos juntos as peças, as dimensões, a cor da corda e os tecidos das almofadas.</p></li>
@@ -184,6 +259,8 @@
       <li class="step"><span class="step__n">04</span><h3>Entrega</h3><p>Levamos os móveis até você. O pagamento é feito na entrega.</p></li>
     </ol>
   </section>
+
+  <div class="rope" aria-hidden="true"></div>
 
   <!-- ENTREGA -->
   <section class="ship" id="entrega">
@@ -200,7 +277,8 @@
 
   <!-- DÚVIDAS -->
   <section class="faq" id="duvidas">
-    <h2 class="sec-title">Dúvidas <em>frequentes</em></h2>
+    <p class="eyebrow"><b>04</b> Perguntas</p>
+      <h2 class="sec-title">Dúvidas <em>frequentes</em></h2>
     <div class="faq__list">
       <details><summary>Os móveis podem ficar no sol e na chuva?</summary><p>Sim. As peças são feitas em alumínio, que não enferruja, e em tricô náutico, uma corda resistente e própria para área externa.</p></details>
       <details><summary>Posso escolher medidas e cores?</summary><p>Pode. Os móveis são personalizados: você define tamanho, cor da corda, tecido das almofadas e a composição do conjunto.</p></details>
@@ -225,10 +303,11 @@
 </main>
 
 <footer class="footer">
+  <img class="footer__logo" src="public/logo-icon.png" alt="" width="117" height="50">
   <p class="footer__mark" aria-hidden="true">TRAMÁRTSS</p>
   <div class="footer__row">
     <p>TRAMÁRTSS Móveis Artesanais. Móveis para área externa em alumínio e tricô náutico, direto de fábrica.</p>
-    <p>&copy; 2026</p>
+    <p>&copy; 2026 &middot; Desenvolvido por <a class="footer__dev" href="https://hlsolutions.com.br" target="_blank" rel="noopener">HL Solutions</a></p>
   </div>
 </footer>
 
